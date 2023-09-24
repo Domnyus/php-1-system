@@ -38,7 +38,7 @@ if (isset($_POST["logout"])) {
                                 if (!isset($_SESSION["id"])) {
                                     echo
                                     '
-    <form action="" method="post" class="row">
+    <form method="post" class="row">
         <div class="col-4">
             <input class="col-12" type="text" name="username" id="username" required maxlength="32" placeholder="Username">
         </div>
@@ -89,7 +89,7 @@ if (isset($_POST["logout"])) {
                 <h1>Contact</h1>
             </div>
             <div class="col-12">
-                <form action="post" class="panel row">
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="panel row">
                     <div class="col-9">
                         <label for="email" class="col-12">E-mail:</label>
                         <input type="email" name="email" id="email" required class="col-8 form-input">
