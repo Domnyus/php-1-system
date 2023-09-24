@@ -140,7 +140,7 @@ if (isset($_POST["logout"])) {
             </script>
             ";
 
-            if($_SESSION["w-error"] != "")
+            if(isset($_SESSION["w-error"]) && $_SESSION["w-error"] != "")
             {
                 echo "
                 <script>
